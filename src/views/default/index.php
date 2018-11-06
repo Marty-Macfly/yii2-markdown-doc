@@ -1,21 +1,29 @@
 <?php
 
+use miolae\yii2\doc\assets\ImageAsset;
 use yii\bootstrap\Nav;
 use yii\helpers\ArrayHelper;
 
-/* @var $this yii\web\View */
+/* @var yii\web\View $this  */
+/* @var string $content */
+/* @var string|null $title */
+/* @var string $pageCurrent */
+/* @var array $list */
+
+ImageAsset::register($this);
 $this->title = ($title === null) ? 'Documentation' : $title;
 $this->params['breadcrumbs'][] = $this->title;
 
 $menuItems = [];
 
-foreach ($list as $key => $item) {
-    $menuItems[] = [
-        'label' => sprintf("%s %s", str_pad('', ArrayHelper::getValue($item, 'pad'), '--'), ArrayHelper::getValue($item, 'name')),
-        'url' => ['index' , 'page' => $key],
-        'options' => (ArrayHelper::getValue($item, 'type') == 'file') ? [] : ['class' => 'disabled'],
-        'active' => ($page == $key),
-    ];
+foreach ($list as $page => $item) {
+    if (!empty($page)) {
+        $menuItems[] = [
+            'label' => sprintf("%s %s", str_pad('', ArrayHelper::getValue($item, 'pad'), '--'), ArrayHelper::getValue($item, 'name')),
+            'url' => ['index', 'page' => $page],
+            'active' => ($pageCurrent == $page),
+        ];
+    }
 }
 
 ?>

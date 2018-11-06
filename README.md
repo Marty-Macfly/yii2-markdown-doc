@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist "macfly/yii2-markdown-doc" "*"
+php composer.phar require --prefer-dist "miolae/yii2-markdown-doc" "2"
 ```
 
 or add
 
 ```
-"macfly/yii2-markdown-doc": "*"
+"miolae/yii2-markdown-doc": "2"
 ```
 
 to the require section of your `composer.json` file.
@@ -24,21 +24,18 @@ to the require section of your `composer.json` file.
 Configure
 ------------
 
-> **NOTE:** Make sure that you have [`markdown`](https://github.com/kartik-v/yii2-markdown) module in your config files.
-
 Configure **config/web.php** as follows
 
 ```php
 'modules' => [
     ................
     'doc'  => [
-        'class' => 'macfly\yii2\doc\Module',
-        'rootDocDir' => '@app/docs', // Directory to list
-        'saltKey' => '', // Key use to encrypt file name
-    ],
-    'markdown' => [
-        'class' => 'kartik\markdown\Module',
-    ],
+        'class' => 'miolae\yii2\doc\Module',
+        // Directory to list
+        'rootDocDir' => '@app/docs',
+        // set false if you don't want to cache generated html, usefull for debugging 
+        'cache' => true,
+    ]
     ................
 ],
 ```
