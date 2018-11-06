@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist "miolae/yii2-markdown-doc" "2"
+php composer.phar require --prefer-dist "macfly/yii2-markdown-doc" "^1.0.0"
 ```
 
 or add
 
 ```
-"miolae/yii2-markdown-doc": "2"
+"macfly/yii2-markdown-doc": "^1.0.0"
 ```
 
 to the require section of your `composer.json` file.
@@ -30,11 +30,11 @@ Configure **config/web.php** as follows
 'modules' => [
     ................
     'doc'  => [
-        'class' => 'miolae\yii2\doc\Module',
+        'class' => 'macfly\yii2\doc\Module',
         // Directory to list
         'rootDocDir' => '@app/docs',
         // set false if you don't want to cache generated html, usefull for debugging 
-        'cache' => true,
+        //'cache' => true,
     ]
     ................
 ],

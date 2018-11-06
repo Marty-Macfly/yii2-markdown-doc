@@ -1,10 +1,10 @@
 <?php
 
-namespace miolae\yii2\doc\controllers;
+namespace macfly\yii2\doc\controllers;
 
 use kartik\markdown\Markdown;
-use miolae\yii2\doc\helpers\FileHelper;
-use miolae\yii2\doc\Module;
+use macfly\yii2\doc\helpers\FileHelper;
+use macfly\yii2\doc\Module;
 use Yii;
 use yii\caching\Cache;
 use yii\helpers\ArrayHelper;
@@ -67,7 +67,7 @@ class DefaultController extends Controller
 
         /** @var false|Cache $cache */
         if ($cacheUse && $cache = Yii::$app->get('cache')) {
-            $cacheKey = "miolae-markdown-doc:$filepath";
+            $cacheKey = "macfly-markdown-doc:$filepath";
             $dependency = new \yii\caching\FileDependency(['fileName' => $filepath]);
 
             return $cache->getOrSet($cacheKey, $getContent, null, $dependency);

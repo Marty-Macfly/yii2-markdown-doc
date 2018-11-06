@@ -1,8 +1,8 @@
 <?php
 
-namespace miolae\yii2\doc\assets;
+namespace macfly\yii2\doc\assets;
 
-use miolae\yii2\doc\Module;
+use macfly\yii2\doc\Module;
 use yii\web\AssetBundle;
 
 class ImageAsset extends AssetBundle

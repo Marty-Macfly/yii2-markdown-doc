@@ -1,8 +1,8 @@
 <?php
 
-namespace miolae\yii2\doc;
+namespace macfly\yii2\doc;
 
-use miolae\yii2\doc\assets\ImageAsset;
+use macfly\yii2\doc\assets\ImageAsset;
 use yii\web\AssetManager;
 
 /**

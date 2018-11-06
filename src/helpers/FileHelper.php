@@ -1,6 +1,6 @@
 <?php
 
-namespace miolae\yii2\doc\helpers;
+namespace macfly\yii2\doc\helpers;
 
 use yii\base\InvalidConfigException;
 
@@ -147,7 +147,9 @@ class FileHelper
         }
         $dots = $dotsNew;
 
-        $parts = array_values(array_filter($parts, function($item) {return $item !== '..';}));
+        $parts = array_values(array_filter($parts, function ($item) {
+            return $item !== '..';
+        }));
         while (!empty($dots)) {
             $partsNew = [];
             $key = key($dots);

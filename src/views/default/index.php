@@ -1,6 +1,6 @@
 <?php
 
-use miolae\yii2\doc\assets\ImageAsset;
+use macfly\yii2\doc\assets\ImageAsset;
 use yii\bootstrap\Nav;
 use yii\helpers\ArrayHelper;
 
