@@ -1,18 +1,18 @@
 {
-	"name": "miolae/yii2-markdown-doc",
+	"name": "macfly/yii2-markdown-doc",
 	"description": "Yii2 module to write documentation with MarkDown files",
 	"version" : "2.0.0",
 	"keywords": ["yii2", "markdown", "doc"],
 	"type": "yii2-module",
 	"license": "MIT",
-	"homepage": "https://github.com/miolae/yii2-markdown-doc",
+	"homepage": "https://github.com/macfly/yii2-markdown-doc",
 	"support": {
-		"issues": "https://github.com/miolae/yii2-markdown-doc/issues",
-		"source": "https://github.com/miolae/yii2-markdown-doc"
+		"issues": "https://github.com/macfly/yii2-markdown-doc/issues",
+		"source": "https://github.com/macfly/yii2-markdown-doc"
 	},
 	"authors": [
 		{
-			"name": "Miolae",
+			"name": "macfly",
 			"email": "viktorprogger@gmail.com"
 		}
 	],
@@ -28,7 +28,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"miolae\\yii2\\doc\\": "src/"
+			"macfly\\yii2\\doc\\": "src/"
 		}
 	}
 }
